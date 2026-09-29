@@ -1,4 +1,5 @@
 /vendor/
 /composer.phar
 /storage/logs/
+/uploads/
 /.env
