@@ -67,8 +67,8 @@ function render_breadcrumbs(bool $dark = false): void {
     }
   }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" crossorigin="anonymous">
 <style>
   body{font-family:'Inter',sans-serif;}
   .gauge-canvas{background:#0b1220;border-radius:0.5rem;}
@@ -86,6 +86,7 @@ function render_breadcrumbs(bool $dark = false): void {
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
         <a href="<?= htmlspecialchars($publicUrl) ?>/index.php" class="hover:text-brand-600 transition">Home</a>
+        <a href="<?= htmlspecialchars($publicUrl) ?>/converter.php" class="hover:text-brand-600 transition">File Converter</a>
         <a href="<?= htmlspecialchars($publicUrl) ?>/analyze.php" class="hover:text-brand-600 transition">Image Gauges</a>
         <a href="<?= htmlspecialchars($publicUrl) ?>/about.php" class="hover:text-brand-600 transition">About</a>
       </nav>
@@ -113,6 +114,7 @@ function render_breadcrumbs(bool $dark = false): void {
   <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white">
     <div class="px-4 py-3 space-y-1 text-sm font-medium">
       <a href="<?= htmlspecialchars($publicUrl) ?>/index.php" class="block rounded-lg px-3 py-2 hover:bg-brand-50 text-slate-700">Home</a>
+      <a href="<?= htmlspecialchars($publicUrl) ?>/converter.php" class="block rounded-lg px-3 py-2 hover:bg-brand-50 text-slate-700">File Converter</a>
       <a href="<?= htmlspecialchars($publicUrl) ?>/analyze.php" class="block rounded-lg px-3 py-2 hover:bg-brand-50 text-slate-700">Image Gauges</a>
       <a href="<?= htmlspecialchars($publicUrl) ?>/about.php" class="block rounded-lg px-3 py-2 hover:bg-brand-50 text-slate-700">About</a>
       <div class="border-t border-slate-100 my-2"></div>

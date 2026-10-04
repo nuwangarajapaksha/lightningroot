@@ -14,13 +14,14 @@
       <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wide">Live now</h4>
       <ul class="space-y-2 text-sm">
         <li><a href="<?= htmlspecialchars(public_url('analyze.php')) ?>" class="flex items-center gap-2 hover:text-white transition"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Image Analysis Gauges</a></li>
+        <li><a href="<?= htmlspecialchars(public_url('converter.php')) ?>" class="flex items-center gap-2 hover:text-white transition"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>File Converter</a></li>
         <li><a href="<?= htmlspecialchars(public_url('about.php')) ?>" class="text-slate-500 hover:text-white transition">About the platform</a></li>
       </ul>
     </div>
     <div>
       <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wide">Coming next</h4>
       <ul class="space-y-2 text-sm">
-        <?php foreach (['File conversion', 'Document scanning', 'Image / PDF editing', 'Subtitles and captions', 'API access'] as $service): ?><li class="text-slate-500"><?= htmlspecialchars($service) ?></li><?php endforeach; ?>
+        <?php foreach (['Document scanning', 'Image / PDF editing', 'Subtitles and captions', 'API access'] as $service): ?><li class="text-slate-500"><?= htmlspecialchars($service) ?></li><?php endforeach; ?>
       </ul>
     </div>
     <div>

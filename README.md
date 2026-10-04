@@ -27,6 +27,8 @@ A document & image analysis tools website built with **PHP, JavaScript, HTML, Ta
   19. FFT / Frequency Spectrum
   20. Edge Detection
   21. Gradient / Saliency Map
+- **Browser-based File Converter** at `/converter.php`: images (JPEG, PNG, WebP, and browser-decodable images) to JPEG/PNG/WebP; image/PDF to PDF and PDF pages to ZIP; TXT/Markdown/HTML/DOCX text conversion; audio (MP3/WAV/AAC) and video (MP4/WebM) transcoding; ZIP creation/recompression; and CSV/JSON/XLS/XLSX conversion.
+- Converter quality, dimensions, bitrate, or compression controls where applicable. Files are processed in the browser and are not uploaded. Some conversions are lossy (PDF pages are rasterized; DOCX text conversion does not retain page layout). Output size depends on the source and chosen settings and may increase.
 - An About page roadmap listing all 69 gauges and document services, grouped by category, each flagged **Live** or **Soon** — ready for you to wire up more analyses over time without redesigning the site.
 - User accounts (register/login/logout) with PostgreSQL-backed sessions, and an optional "Save to my account" action on the analyze page that stores the uploaded image + its numeric gauge summary (sharpness, noise, SNR, contrast, dynamic range, clipping %) as JSON.
 - **Admin panel** (`/admin`) restricted to `role = 'admin'` users: overview stats, an uploads-per-day chart, a users table, and an uploads table with quick previews and key metrics.
@@ -37,6 +39,7 @@ A document & image analysis tools website built with **PHP, JavaScript, HTML, Ta
 - All gauge math (histograms, Sobel edge detection, Laplacian-variance sharpness, box-blur based noise estimate, a small discrete Fourier transform for the frequency spectrum, a center-surround saliency approximation, etc.) lives in `public/assets/js/gauges.js`, fully commented, so you can extend it with the remaining 48 gauges later.
 - Heavy pixel operations (Sobel, Laplacian, FFT, saliency) run on a **downscaled copy** of the image (max ~400px) for performance; simple stats like histograms and waveforms run on the full-resolution image.
 - PHP is plain, framework-free, and uses PDO with prepared statements throughout.
+- The converter loads PDF, DOCX, spreadsheet, ZIP, and FFmpeg WebAssembly libraries on demand from public CDNs. Audio/video conversion needs a modern browser with cross-origin isolation; the converter response sets `Cross-Origin-Opener-Policy: same-origin` and `Cross-Origin-Embedder-Policy: credentialless` for `SharedArrayBuffer` support.
 
 ## Setup
 
@@ -82,5 +85,5 @@ uploads/        saved images referenced by admin panel
 
 - Wire up the remaining ~48 gauges in the About page roadmap (composition grids, curves, wavelet/depth/optical-flow maps) as new functions in `gauges.js`.
 - Add password-reset flow and email verification.
-- Add scanning / file-conversion / editing services as new top-level sections once ready.
+- Add scanning and editing services as new top-level sections.
 - Move uploads outside the web root and add a signed-URL or admin-gated download script.

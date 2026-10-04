@@ -1,9 +1,9 @@
 <?php
 $pageTitle = 'About';
-$pageDescription = 'Explore the LightningRoot roadmap: Image Analysis Gauges are live now, with document scanning, file conversion, editing, captions, subtitles, and API access planned.';
+$pageDescription = 'Explore LightningRoot capabilities: browser-based image analysis and file conversion are live, with scanning, editing, captions, subtitles, and API access planned.';
 require_once __DIR__ . '/../includes/header.php';
 
-$live = ['Image Analysis Gauges', 'Histogram','RGB Histogram','Luma Histogram','Waveform Monitor','RGB Parade','Vectorscope','False Color','Zebra Pattern','Clipping Detection','Focus Peaking','Sharpness Meter','Blur Detection','Noise Meter','SNR Meter','Contrast Meter','Dynamic Range Meter','Color Distribution','Cumulative Histogram','FFT / Frequency Spectrum','Edge Detection','Gradient / Saliency Map'];
+$live = ['Image Analysis Gauges', 'File Format Conversion', 'Histogram','RGB Histogram','Luma Histogram','Waveform Monitor','RGB Parade','Vectorscope','False Color','Zebra Pattern','Clipping Detection','Focus Peaking','Sharpness Meter','Blur Detection','Noise Meter','SNR Meter','Contrast Meter','Dynamic Range Meter','Color Distribution','Cumulative Histogram','FFT / Frequency Spectrum','Edge Detection','Gradient / Saliency Map'];
 $categories = [
   // 'Histograms & Distributions' => ['Histogram','RGB Histogram','Luma Histogram','2D Histogram','Joint Histogram','Cumulative Histogram','CDF','Grayscale Histogram','Color Histogram','Color Distribution'],
   // 'Waveform & Scopes' => ['Waveform Monitor','Luma Waveform','RGB Waveform','YC Waveform','RGB Parade','Parade','YCbCr Parade','Vectorscope','YUV Vectorscope','Chroma Waveform','IRE Meter','Exposure Meter'],
@@ -21,13 +21,13 @@ $categories = [
   <?php render_breadcrumbs(); ?>
   <div class="max-w-3xl mx-auto text-center mb-14">
     <h1 class="text-3xl font-bold text-slate-900 mb-4">About LightningRoot</h1>
-    <p class="text-slate-600 leading-relaxed mb-4">LightningRoot.com is being built as a home for practical, fast document and image tools — starting with a full suite of professional-grade image analysis gauges, and growing to include scanning, file conversion, and editing services.</p>
+    <p class="text-slate-600 leading-relaxed mb-4">LightningRoot.com is a home for practical, browser-based image and file tools, including professional image analysis gauges and a converter for common image, PDF, document, media, archive, and spreadsheet formats.</p>
     <p class="text-slate-600 leading-relaxed">Every gauge runs directly in your browser: nothing is uploaded unless you choose to save a result to your account, which helps keep your files private and analysis instant.</p>
   </div>
 
   <div class="max-w-3xl mx-auto mb-12">
     <h2 class="text-2xl font-bold text-slate-900 text-center mb-3">Capabilities and roadmap</h2>
-    <p class="text-center text-slate-600">21 gauges are live today. The remaining tools below are planned as LightningRoot expands its analysis and document toolkit.</p>
+    <p class="text-center text-slate-600">21 gauges and common file conversion are live today. Other document services remain on the roadmap.</p>
   </div>
 
   <div class="space-y-10">

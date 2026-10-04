@@ -1,11 +1,11 @@
 <?php
 $pageTitle = 'Document and Image Tools';
-$pageDescription = 'LightningRoot is building a practical workspace for image gauges, file conversion, document scanning, editing, captions, subtitles, and APIs. Try the browser-based Image Gauges today.';
+$pageDescription = 'LightningRoot offers browser-based Image Analysis Gauges and a File Converter, with document scanning, editing, captions, subtitles, and API access on the roadmap.';
 require_once __DIR__ . '/../includes/header.php';
 
 $services = [
   ['Image Analysis Gauges', 'Live now', 'Measure exposure, color, sharpness, noise, contrast, frequency, and more directly in your browser.', 'analyze.php', 'bg-brand-600'],
-  ['File Conversion', 'Coming soon', 'Move between common document and image formats with clear, dependable output.', null, 'bg-slate-800'],
+  ['File Conversion', 'Live now', 'Convert common image, PDF, document, media, archive, and spreadsheet formats in your browser.', 'converter.php', 'bg-emerald-600'],
   ['Document Scanning', 'Coming soon', 'Turn scans into organized, searchable digital documents.', null, 'bg-slate-800'],
   ['Image and PDF Editing', 'Coming soon', 'Make practical edits, pages, crops, and exports in one focused workspace.', null, 'bg-slate-800'],
   ['Subtitles and Captions', 'Coming soon', 'Prepare accessible captions and subtitles for the content you create.', null, 'bg-slate-800'],
@@ -33,9 +33,10 @@ $upcomingServices = count($services) - $liveServices;
         <div class="max-w-xl">
           <p class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-brand-700"><span class="h-2 w-2 rounded-full bg-emerald-500"></span> LightningRoot platform</p>
           <h1 class="mt-5 text-4xl sm:text-6xl font-extrabold tracking-[-0.04em] leading-[.98] text-slate-950">Make every file<br><span class="text-brand-600">more legible.</span></h1>
-          <p class="mt-5 max-w-lg text-base sm:text-lg leading-7 text-slate-600">A growing workspace for understanding, transforming, and publishing images and documents. Start with 21 browser-based Image Analysis Gauges.</p>
+          <p class="mt-5 max-w-lg text-base sm:text-lg leading-7 text-slate-600">A growing workspace for understanding and transforming files. Explore 21 browser-based Image Analysis Gauges or convert common file formats locally.</p>
           <div class="mt-7 flex flex-col sm:flex-row gap-3">
             <a href="<?= htmlspecialchars(public_url('analyze.php')) ?>#image-upload" class="inline-flex justify-center items-center rounded-xl bg-brand-600 px-6 py-3.5 font-bold text-white shadow-lg shadow-brand-600/20 hover:bg-brand-700 transition">Explore Image Gauges</a>
+            <a href="<?= htmlspecialchars(public_url('converter.php')) ?>" class="inline-flex justify-center items-center rounded-xl border border-slate-300 bg-white px-6 py-3.5 font-bold text-slate-700 hover:border-brand-300 hover:text-brand-700 transition">Convert a file</a>
           </div>
           <div class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold text-slate-500"><span class="inline-flex items-center gap-2"><i class="h-2 w-2 rounded-full bg-emerald-500"></i>Live in browser</span><span class="inline-flex items-center gap-2"><i class="h-2 w-2 rounded-full bg-brand-500"></i>No setup</span><span class="inline-flex items-center gap-2"><i class="h-2 w-2 rounded-full bg-slate-300"></i>More tools ahead</span></div>
         </div>
@@ -58,7 +59,7 @@ $upcomingServices = count($services) - $liveServices;
 
   <section class="border-y border-slate-800 bg-slate-950 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-      <div class="flex items-end justify-between gap-6 mb-8 flex-wrap"><div><p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-300">Platform status / 2026</p><h2 class="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight">The toolkit, at a glance.</h2></div><p class="max-w-sm text-sm leading-6 text-slate-400">One service is ready today. The rest are being shaped into focused, useful tools.</p></div>
+      <div class="flex items-end justify-between gap-6 mb-8 flex-wrap"><div><p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-300">Platform status / 2026</p><h2 class="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight">The toolkit, at a glance.</h2></div><p class="max-w-sm text-sm leading-6 text-slate-400">Two services are ready today. The rest are being shaped into focused, useful tools.</p></div>
       <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/70">
         <table class="w-full min-w-[760px] text-left">
           <caption class="sr-only">LightningRoot platform service snapshot</caption>
@@ -75,7 +76,7 @@ $upcomingServices = count($services) - $liveServices;
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-12 items-start">
       <div><p class="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">The idea</p><h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">One home for useful file work.</h2></div>
-      <div class="space-y-5 text-slate-600 leading-7"><p>Most file workflows are scattered across specialist apps, one-off converters, and tools that make simple tasks feel heavy. LightningRoot is being designed as a calm, connected place for the work around a file.</p><p>Each service will earn its own focused page, clear inputs and outputs, and search-friendly documentation. For now, Image Gauges is the first complete experience.</p></div>
+      <div class="space-y-5 text-slate-600 leading-7"><p>Most file workflows are scattered across specialist apps, one-off converters, and tools that make simple tasks feel heavy. LightningRoot is being designed as a calm, connected place for the work around a file.</p><p>Each service has a focused page and clear inputs and outputs. Start with Image Gauges or convert common files privately in your browser.</p></div>
     </div>
   </section>
 
@@ -94,5 +95,5 @@ $upcomingServices = count($services) - $liveServices;
     </div>
   </section>
   
-  <section class="bg-brand-600 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"><div><h2 class="text-2xl sm:text-3xl font-extrabold">Start with the part that is ready.</h2><p class="mt-2 text-brand-100">No installation. No server-side image analysis. Just open an image and inspect it.</p></div><a href="<?= htmlspecialchars(public_url('analyze.php')) ?>#image-upload" class="shrink-0 rounded-xl bg-white px-5 py-3 font-bold text-brand-700 hover:bg-brand-50 transition">Try Image Gauges</a></div></section>
+  <section class="bg-brand-600 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"><div><h2 class="text-2xl sm:text-3xl font-extrabold">Choose a tool and get to work.</h2><p class="mt-2 text-brand-100">Analyze an image or convert common file formats in your browser.</p></div><div class="flex flex-wrap gap-3"><a href="<?= htmlspecialchars(public_url('analyze.php')) ?>#image-upload" class="shrink-0 rounded-xl bg-white px-5 py-3 font-bold text-brand-700 hover:bg-brand-50 transition">Try Image Gauges</a><a href="<?= htmlspecialchars(public_url('converter.php')) ?>" class="shrink-0 rounded-xl border border-white/50 px-5 py-3 font-bold text-white hover:bg-white/10 transition">Open Converter</a></div></div></section>
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>
